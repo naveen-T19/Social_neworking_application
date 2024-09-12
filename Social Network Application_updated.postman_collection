@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\":\"naveen_s\",\r\n    \"email\":\"naveen@socials.com\",\r\n    \"password\":\"Test@12345\"\r\n}",
+					"raw": "{\r\n    \"username\":\"<usernmae>\",\r\n    \"email\":\"<email>\",\r\n    \"password\":\"<password>\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -21,15 +21,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/users/register",
-					"protocol": "http",
+					"raw": "{endpoint}/api/users/register",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{endpoint}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"users",
@@ -46,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"naveen@social.com\",\r\n    \"password\": \"Test@1234\"\r\n}",
+					"raw": "{\r\n    \"email\":\"<username>\",\r\n    \"password\": \"<password>\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -54,15 +49,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/users/login",
-					"protocol": "http",
+					"raw": "{endpoint}/api/users/login",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{endpoint}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"users",
@@ -79,13 +69,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 0778bd948ab246d00c839f47c84133d5181e970f",
+						"value": "Token {token from login}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"nav\"\r\n}",
+					"raw": "{\r\n    \"name\":\"<name>\",\r\n    \"email\":\"<mail>\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -93,15 +83,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/users/list_users",
-					"protocol": "http",
+					"raw": "{endpoint}/api/users/list_users",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{endpoint}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"users",
@@ -157,20 +142,15 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 0778bd948ab246d00c839f47c84133d5181e970f",
+						"value": "Token {token from login}",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/connections/list_friends",
-					"protocol": "http",
+					"raw": "{endpoint}/api/connections/list_friends",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{endpoint}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"connections",
@@ -187,20 +167,15 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 0778bd948ab246d00c839f47c84133d5181e970f",
+						"value": "Token {token from login}",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/connections/list_pending_requests",
-					"protocol": "http",
+					"raw": "{endpoint}/api/connections/list_pending_requests",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{endpoint}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"connections",
@@ -217,13 +192,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 0778bd948ab246d00c839f47c84133d5181e970f",
+						"value": "Token {token from login}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{   \r\n    \"friend_id\":\"4\"\r\n}",
+					"raw": "{   \r\n    \"friend_id\":\"<user_id>\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -231,15 +206,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/connections/accept_friend_request",
-					"protocol": "http",
+					"raw": "{endpoint}/api/connections/accept_friend_request",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{endpoint}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"connections",
@@ -256,13 +226,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 0778bd948ab246d00c839f47c84133d5181e970f",
+						"value": "Token {token from login}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"friend_id\":\"1\"\r\n}",
+					"raw": "{\r\n    \"friend_id\":\"<user_id>\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -270,15 +240,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/connections/reject_friend_request",
-					"protocol": "http",
+					"raw": "{endpoint}/api/connections/reject_friend_request",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{endpoint}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"connections",
